@@ -1,0 +1,15 @@
+.c-quad {
+  height: 50%;
+  width: 50%;
+  border: 2px solid black;
+}
+
+.c-site {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}

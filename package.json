@@ -1,0 +1,35 @@
+{
+  "name": "vue-spa-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "ally.js": "^1.4.1",
+    "date-fns": "^1.30.1",
+    "portal-vue": "^1.3.0",
+    "register-service-worker": "^1.0.0",
+    "vue": "^2.5.17",
+    "vue-lazyload": "^1.2.6",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-plugin-pwa": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "@vue/eslint-config-airbnb": "^3.0.1",
+    "fs": "0.0.1-security",
+    "node-sass": "^4.9.0",
+    "path": "^0.12.7",
+    "prerender-spa-plugin": "^3.3.0",
+    "progress": "^2.0.0",
+    "sass-loader": "^7.0.1",
+    "sharp": "^0.20.7",
+    "vue-template-compiler": "^2.5.17"
+  }
+}

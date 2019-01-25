@@ -1,0 +1,88 @@
+// Mirum Color Map
+$colors: (
+  'black': #2D2D39,
+
+  'blue': (
+    'base': #4cc8ed,
+    'light': #E8F6FA,
+    'medium': #C0E9FF,
+    'dark': #122377,
+    'accent': #00A8F7,
+    'digital': #196ECF,
+    'hover': #115FA0,
+  ),
+
+  'gray': (
+    'base': #8C9599,
+    'light': #f9f9f9,
+    'medium': #E0E0E0,
+    'dark': #444444,
+    'accent': #B3BABC,
+    'digital': #757588,
+  ),
+
+  'green': (
+    'base': #14a74a,
+    'light': #E1FADF,
+    'medium': #BBEABB,
+    'dark': #007000,
+    'accent': #93ED58,
+    'digital': #0D880B,
+  ),
+
+  'orange': (
+    'base': #FF5F0E,
+    'light': #FFE7E1,
+    'medium': #FFC9B6,
+    'dark': #D53704,
+    'accent': #FFAA25,
+  ),
+
+  'purple': (
+    'base': #25172a,
+    'light': #EDE9FF,
+    'medium': #D0C7EF,
+    'dark': #3E2087,
+    'accent': #AF71FF,
+  ),
+
+  'pink': (
+    'base': #e24598,
+    'hover': darken(#e24598, 20%),
+  ),
+
+  'red': (
+    'base': #eb2f25,
+    'light': #FFE6F0,
+    'medium': #FFB8C9,
+    'dark': #B10C00,
+    'accent': #FA69BF,
+  ),
+
+  'teal': (
+    'base': #00BCD6,
+    'light': #DFF7FA,
+    'medium': #A5EBEF,
+    'dark': #007C89,
+    'accent': #4DEEFF,
+  ),
+
+  'violet': (
+    'base': #9521AD,
+    'light': #F3E4F7,
+    'medium': #E3C5EA,
+    'dark': #5C1D6B,
+    'accent': #D360EF,
+  ),
+
+  'white': #FFFFFF,
+
+  'yellow': (
+    'base': #FFD00D,
+    'light': #FFFCD9,
+    'medium': #FFFA97,
+    'dark': #DB9C00,
+    'accent': #FFFF00,
+    'alert': #8F6600,
+  ),
+);
