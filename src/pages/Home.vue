@@ -1,11 +1,30 @@
 <template>
   <div class="c-site">
-    <div v-for="(house, index) in houses" :key="index" class="c-quad">
-      <p>{{ house.name }}</p>
+    <div class="c-quad">
+      <img class="c-quad__img" src="/img/houses/phoenix.png" alt="">
     </div>
-    <div class="c-spinner">
-      <img src="img/icons/apple-touch-icon-180x180.png" alt="" :style="{ transform: `rotate(${this.spinnerAngle}deg)`}">
+    <div class="c-quad">
+      <img class="c-quad__img" src="/img/houses/griffin.png" alt="">
     </div>
+    <div class="c-quad">
+      <img class="c-quad__img" src="/img/houses/pegasus.png" alt="">
+    </div>
+    <div class="c-quad">
+      <img class="c-quad__img" src="/img/houses/lion.png" alt="">
+    </div>
+    <transition name="u-trans-pop">
+      <div v-if="showHouse" class="o-center-stage o-center-stage--bg c-house">
+        <img class="c-house__img" :src="`/img/houses/${selectedHouse.image}`" alt="">
+        <img class="c-house__bloom" :src="`/img/houses/bloom/${selectedHouse.image}`" alt="">
+          <img class="c-house__sparkle" :src="`/img/houses/bloom/sparkle/${selectedHouse.image}`" alt="">
+        <p class="c-house__title">{{ selectedHouse.name }}</p>
+      </div>
+    </transition>
+    <transition name="u-trans-pop">
+      <div v-if="!showHouse" class="o-center-stage c-spinner">
+        <img src="img/spinner.png" alt="" :style="{ transform: `rotate(${this.spinnerAngle}deg)`}">
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -18,6 +37,7 @@ export default {
       spinnerSpeed: 8,
       isSpinning: false,
       isStopping: false,
+      showHouse: false,
       beginStopAngle: 0,
       stopAngle: 0,
       stopAngleDiff: 0,
@@ -25,15 +45,23 @@ export default {
       houses: [
         {
           name: 'Griffin',
+          id: 'griffin',
+          image: 'griffin.png',
         },
         {
           name: 'Lion',
+          id: 'lion',
+          image: 'lion.png',
         },
         {
           name: 'Pegasus',
+          id: 'pegasus',
+          image: 'pegasus.png',
         },
         {
           name: 'Phoenix',
+          id: 'phoenix',
+          image: 'phoenix.png',
         },
       ],
       selectedHouse: {},
@@ -54,6 +82,7 @@ export default {
       }
     },
     startSpin() {
+      this.showHouse = false;
       this.isSpinning = true;
       window.requestAnimationFrame(this.spin);
     },
@@ -62,6 +91,11 @@ export default {
     },
     endSpin() {
       console.log(this.selectedHouse.name);
+
+      const that = this;
+      setTimeout(() => {
+        that.showHouse =  true;
+      }, 250);
     },
     slowSpin() {
       // TODO: Currently have an ease out that is based on distance

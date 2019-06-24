@@ -1,0 +1,41 @@
+.c-house__bloom,
+.c-house__sparkle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: 1;
+  animation-name: spinLeft;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+/* Standard syntax */
+@keyframes spinLeft {
+  from { transform: translate(-50%, -50%) rotate(0deg) }
+  to { transform: translate(-50%, -50%) rotate(-360deg) }
+}
+
+.c-house__sparkle {
+  z-index: 2;
+  animation-name: spinRight;
+}
+
+@keyframes spinRight {
+  from { transform: translate(-50%, -50%) rotate(0deg) }
+  to { transform: translate(-50%, -50%) rotate(360deg) }
+}
+
+.c-house__img {
+  max-width: 820px;
+  z-index: 3;
+  position: relative;
+}
+
+.c-house__title {
+  font-size: 10vw;
+  font-weight: bold;
+  background: white;
+  position: relative;
+  z-index: 2;
+}

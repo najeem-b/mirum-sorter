@@ -1,0 +1,15 @@
+.o-center-stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(1) translate(-50%, -50%);
+  transform-origin: center;
+  z-index: 10;
+  text-align: center;
+
+  &--bg {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+}

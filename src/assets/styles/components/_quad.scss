@@ -2,6 +2,14 @@
   height: 50%;
   width: 50%;
   border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.c-quad__img {
+  max-width: 90%;
 }
 
 .c-site {

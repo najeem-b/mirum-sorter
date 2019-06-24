@@ -1,0 +1,12 @@
+.u-trans-pop {
+
+  &-enter,
+  &-leave-to {
+    transform: scale(0) translate(-100%, -100%);
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: transform 0.3s ease;
+  }
+}
